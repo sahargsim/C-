@@ -1,0 +1,2 @@
+backend: node serve.js
+frontend: npm run serve
