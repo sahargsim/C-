@@ -11,7 +11,7 @@ exports.create = (req, res) => {
       return;
     }
   
-    // Create a Tutorial
+    // Create a Product
     const product = {
       title: req.body.title,
       description: req.body.description,
@@ -20,7 +20,7 @@ exports.create = (req, res) => {
       category: req.body.category,
     };
   
-    // Save Tutorial in the database
+    // Save Product in the database
     Product.create(product)
       .then(data => {
         res.send(data);
@@ -48,7 +48,7 @@ exports.create = (req, res) => {
       });
   };
 
-// Find a single Tutorial with an id
+// Find a single Product with an id
 exports.findOne = (req, res) => {
     const id = req.params.id;
   
@@ -62,7 +62,7 @@ exports.findOne = (req, res) => {
         });
       });
   };
-// Update a Tutorial by the id in the request
+// Update a Product by the id in the request
 exports.update = (req, res) => {
     const id = req.params.id;
   
@@ -112,7 +112,7 @@ exports.delete = (req, res) => {
       });
   };
 
-// Delete all Tutorials from the database.
+// Delete all Product from the database.
 exports.deleteAll = (req, res) => {
     Product.destroy({
       where: {},
